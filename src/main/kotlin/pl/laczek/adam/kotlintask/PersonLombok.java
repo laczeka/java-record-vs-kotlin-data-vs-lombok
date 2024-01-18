@@ -9,9 +9,12 @@ import java.util.Optional;
 @Builder
 public class PersonLombok {
     @Getter
-    private String name;
-    private LocalDate born;
-    private Optional<String> hobby;
+    @NonNull
+    private final String name;
+    @NonNull
+    private final LocalDate born;
+    @Builder.Default
+    private final Optional<String> hobby = Optional.empty();
 
     public String dayOfBirth() {
         return born.getDayOfWeek().toString();

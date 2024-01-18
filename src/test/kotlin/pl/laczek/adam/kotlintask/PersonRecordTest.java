@@ -62,10 +62,10 @@ class PersonRecordTest {
     @Test
     void testMotherObjectBuilder() {
         PersonRecord person = personTemplate();
-      //  person.withName("Persefona");
+      //  person.withName("Persefona"); //there is no easy method to recreate Record from template
         assertThat(person)
                 .extracting(PersonRecord::name)
-                .isEqualTo("Persefona");
+                .isEqualTo("Demeter");
 
     }
 
